@@ -64,7 +64,7 @@ function App() {
             <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
               <img
                 className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
-                src="/students.png"
+                src="students.png"
                 alt="edstasy-logo"
               />
             </div>
@@ -77,7 +77,7 @@ function App() {
             <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
               <img
                 className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
-                src="/lecture.png"
+                src="lecture.png"
                 alt="edstasy-logo"
               />
             </div>
@@ -89,7 +89,7 @@ function App() {
             <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
               <img
                 className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
-                src="/teacher.png"
+                src="teacher.png"
                 alt="edstasy-logo"
               />
             </div>
