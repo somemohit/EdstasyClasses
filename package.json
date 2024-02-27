@@ -1,8 +1,8 @@
 {
-  "homepage": "https://somemohit.github.io/edstasyclasses",
+  "homepage": "https://somemohit.github.io/EdstasyClasses",
   "name": "edstasyclasses",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
