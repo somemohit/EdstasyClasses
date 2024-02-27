@@ -29,7 +29,7 @@ function App() {
             <div className="text-white h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20">
               <img
                 className="w-full h-full object-contain"
-                src="logo.png"
+                src="./EdstasyClasses/logo.png"
                 alt="edstasy-logo"
               />
             </div>
@@ -66,16 +66,14 @@ function App() {
         >
           <SwiperSlide>
             <img
-              className="w-full h-96 md:w-4/5 md:h-4/5 object-contain"
+              className="w-full h-96 object-contain"
               src="tution.jpg"
               alt="edstasy-logo"
             />
-            Slide 1
           </SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
           <SwiperSlide>Slide 4</SwiperSlide>
-          ...
         </Swiper>
         <div className="h-auto md:h-96 bg-blue-500 p-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
