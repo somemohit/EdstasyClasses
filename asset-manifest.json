@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/EdstasyClasses/static/css/main.7988852a.css",
-    "main.js": "/EdstasyClasses/static/js/main.ee37604a.js",
+    "main.js": "/EdstasyClasses/static/js/main.ad3756bc.js",
     "static/js/453.c0944fef.chunk.js": "/EdstasyClasses/static/js/453.c0944fef.chunk.js",
     "static/media/tution.jpg": "/EdstasyClasses/static/media/tution.98e5cbd86a99c14478cb.jpg",
     "index.html": "/EdstasyClasses/index.html",
     "main.7988852a.css.map": "/EdstasyClasses/static/css/main.7988852a.css.map",
-    "main.ee37604a.js.map": "/EdstasyClasses/static/js/main.ee37604a.js.map",
+    "main.ad3756bc.js.map": "/EdstasyClasses/static/js/main.ad3756bc.js.map",
     "453.c0944fef.chunk.js.map": "/EdstasyClasses/static/js/453.c0944fef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7988852a.css",
-    "static/js/main.ee37604a.js"
+    "static/js/main.ad3756bc.js"
   ]
 }
