@@ -105,7 +105,7 @@ function App() {
           <div className="flex items-center gap-4">
             <FiMapPin className="text-gray-700" />
             <span className="text-sm sm:text-base md:text-lg">
-              123 Main Street, Cityville, State, Country
+              123 Main Street, Cityville, State, Coun
             </span>
           </div>
           <div className="flex items-center gap-4">
