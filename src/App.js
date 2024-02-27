@@ -10,6 +10,16 @@ import {
 } from 'react-icons/fi';
 import {IoLogoWhatsapp} from 'react-icons/io';
 
+import {Navigation, Pagination, A11y} from 'swiper/modules';
+
+import {Swiper, SwiperSlide} from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 function App() {
   return (
     <div>
@@ -45,6 +55,28 @@ function App() {
       </nav>
 
       <main className="mx-auto">
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{clickable: true}}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <SwiperSlide>
+            <img
+              className="w-full h-96 md:w-4/5 md:h-4/5 object-contain"
+              src="tution.jpg"
+              alt="edstasy-logo"
+            />
+            Slide 1
+          </SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          ...
+        </Swiper>
         <div className="h-auto md:h-96 bg-blue-500 p-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Welcome to my website
