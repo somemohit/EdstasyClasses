@@ -19,7 +19,7 @@ function App() {
             <div className="text-white h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20">
               <img
                 className="w-full h-full object-contain"
-                src="/logo.png"
+                src="logo.png"
                 alt="edstasy-logo"
               />
             </div>
