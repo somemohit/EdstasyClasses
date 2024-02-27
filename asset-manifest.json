@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/edstasyclasses/static/css/main.48e667c5.css",
+    "main.js": "/edstasyclasses/static/js/main.e6d59ee6.js",
+    "static/js/453.c0944fef.chunk.js": "/edstasyclasses/static/js/453.c0944fef.chunk.js",
+    "static/media/tution.jpg": "/edstasyclasses/static/media/tution.98e5cbd86a99c14478cb.jpg",
+    "index.html": "/edstasyclasses/index.html",
+    "main.48e667c5.css.map": "/edstasyclasses/static/css/main.48e667c5.css.map",
+    "main.e6d59ee6.js.map": "/edstasyclasses/static/js/main.e6d59ee6.js.map",
+    "453.c0944fef.chunk.js.map": "/edstasyclasses/static/js/453.c0944fef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48e667c5.css",
+    "static/js/main.e6d59ee6.js"
+  ]
+}
