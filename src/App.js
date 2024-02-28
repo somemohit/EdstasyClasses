@@ -65,13 +65,13 @@ function App() {
             <div className="flex items-center">
               <FiMail className="text-gray-700" />
               <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
-                satyabrata@gmail.com
+              satyabratamishra666@gmail.com
               </span>
             </div>
             <div className="flex items-center">
               <FiPhone className="text-gray-700" />
               <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
-                +91 9785214568
+                +91 7077586648
               </span>
             </div>
           </div>
