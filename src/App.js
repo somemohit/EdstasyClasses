@@ -211,7 +211,7 @@ function App() {
                 <FiInstagram className="text-gray-700 text-2xl" />
               </a>
               <a
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/@EdstasyClasses://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-125 duration-300"
