@@ -49,7 +49,7 @@ function App() {
       <nav className="bg-yellow-300 pt-1 shadow-md">
         <div className="mx-auto flex flex-col md:flex-row justify-between md:items-center gap-2">
           <div className="flex items-center gap-4 px-4 sm:px-10">
-            <div className="text-white h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32">
+            <div className="text-white h-28 w-28 sm:h-28 sm:w-28 md:h-32 md:w-32">
               <img
                 className="w-full h-full object-contain"
                 // src="./EdstasyClasses/logo.png"
