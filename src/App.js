@@ -46,10 +46,10 @@ function App() {
 
   return (
     <div>
-      <nav className="bg-gray-200 p-4">
+      <nav className="bg-gray-200 px-4 sm:px-10 py-1">
         <div className="mx-auto flex flex-col md:flex-row justify-between md:items-center gap-2">
           <div className="flex items-center gap-4">
-            <div className="text-white h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20">
+            <div className="text-white h-28 w-28 sm:h-28 sm:w-28 md:h-32 md:w-32">
               <img
                 className="w-full h-full object-contain"
                 // src="./EdstasyClasses/logo.png"
@@ -57,15 +57,15 @@ function App() {
                 alt="edstasy-logo"
               />
             </div>
-            <div className="text-black text-lg sm:text-xl md:text-2xl font-bold">
+            <div className="text-black text-xl sm:text-xl md:text-4xl font-bold">
               Edstasy Classes
             </div>
           </div>
-          <div className="flex items-center gap-4 pl-2">
+          <div className="flex items-center gap-4 pl-1 pb-1.5 sm:pb-0">
             <div className="flex items-center">
               <FiMail className="text-gray-700" />
               <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
-              satyabratamishra666@gmail.com
+                satyabratamishra666@gmail.com
               </span>
             </div>
             <div className="flex items-center">
@@ -171,8 +171,8 @@ function App() {
       </main>
 
       <footer className="bg-gray-200">
-        <div className="mx-auto h-fit md:h-44 flex flex-col md:flex-row justify-between items-center gap-10 text-black p-10">
-          <div className="text-white h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32">
+        <div className="mx-auto h-fit md:h-56 flex flex-col md:flex-row justify-between items-center gap-10 text-black p-10">
+          <div className="text-white h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44">
             <img
               className="w-full h-full object-contain"
               // src="./EdstasyClasses/logo.png"
@@ -216,7 +216,7 @@ function App() {
           </div>
         </div>
 
-        <div className="bg-gray-400 h-16 flex justify-center items-center">
+        <div className="bg-gray-400 h-16 text-white text-xs sm:text-base flex justify-center items-center">
           Edstasy Classes -2024 © All Rights Reserved.
         </div>
       </footer>
