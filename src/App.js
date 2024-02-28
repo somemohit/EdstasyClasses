@@ -58,7 +58,7 @@ function App() {
               />
             </div>
             <div>
-              <div className="animate-bounce font-Rampart text-black text-2xl sm:text-xl md:text-4xl font-bold">
+              <div className="animate-bounce font-Rampart text-black text-3xl sm:text-3xl md:text-4xl font-bold">
                 Edstasy Classes
               </div>
               <p className="text-2xs md:text-base md:font-semibold">
@@ -140,7 +140,7 @@ function App() {
             </div>
 
             <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
-              200+ Students
+              30+ Students
             </p>
           </div>
           <div className="flex flex-col justify-center items-center mb-8 md:mb-0">
@@ -152,7 +152,7 @@ function App() {
               />
             </div>
             <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
-              20+ Lectures
+              1800+ hours of Lectures
             </p>
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -181,7 +181,7 @@ function App() {
         </div>
       </main>
 
-      <footer className="bg-gray-200">
+      <footer className="bg-yellow-300">
         <div className="mx-auto h-fit md:h-56 flex flex-col md:flex-row justify-between items-center gap-10 text-black p-10">
           <div className="text-white h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44">
             <img
@@ -230,7 +230,7 @@ function App() {
           </div>
         </div>
 
-        <div className="bg-gray-400 h-16 text-white text-xs sm:text-base flex justify-center items-center">
+        <div className="bg-green-200 h-16 text-gray-500 text-xs sm:text-base flex justify-center items-center">
           Edstasy Classes -2024 © All Rights Reserved.
         </div>
       </footer>
