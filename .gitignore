@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+  // "homepage": "https://somemohit.github.io/EdstasyClasses",
+
+
+    // "predeploy": "npm run build",
+    // "deploy": "gh-pages -d build",
