@@ -6,7 +6,7 @@ import {
   FiMapPin,
   FiInstagram,
   FiYoutube,
-  FiTwitter,
+  FiFacebook,
 } from 'react-icons/fi';
 import {IoLogoWhatsapp} from 'react-icons/io';
 
@@ -169,7 +169,7 @@ function App() {
           </div>
         </div>
 
-        <div className="h-96 bg-blue-500 p-10 flex justify-center items-center">
+        <div className="h-96 bg-blue-500 p-4 sm:p-10 flex justify-center items-center">
           <iframe
             title="my-loc"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14926.661394566492!2d86.41384019898022!3d20.723809693601797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1be8874e719bdd%3A0x3cfa88f6a15f4a30!2sGoudasahi%2C%20Odisha%20755004!5e0!3m2!1sen!2sin!4v1709048799478!5m2!1sen!2sin"
@@ -203,7 +203,7 @@ function App() {
             <p className="text-2xl font-bold">Follow us on</p>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/edstasy_classes?igsh=MW96M3ZrMGlyNzVqNg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-125 duration-300"
@@ -219,12 +219,12 @@ function App() {
                 <FiYoutube className="text-gray-700 text-2xl " />
               </a>
               <a
-                href="https://twitter.com/"
+                href="https://www.facebook.com/profile.php?id=61557049223443&mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-125 duration-300"
               >
-                <FiTwitter className="text-gray-700 text-2xl" />
+                <FiFacebook className="text-gray-700 text-2xl" />
               </a>
             </div>
           </div>
@@ -236,7 +236,7 @@ function App() {
       </footer>
 
       <a
-        href="https://api.whatsapp.com/send?phone=7077586648"
+        href="https://api.whatsapp.com/send?phone=7750803022"
         target="_blank"
         rel="noopener noreferrer"
         title="whatsapp me"
