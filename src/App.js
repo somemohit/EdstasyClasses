@@ -46,10 +46,10 @@ function App() {
 
   return (
     <div>
-      <nav className="bg-gray-200 px-4 sm:px-10 py-1">
+      <nav className="bg-yellow-300 pt-1 shadow-md">
         <div className="mx-auto flex flex-col md:flex-row justify-between md:items-center gap-2">
-          <div className="flex items-center gap-4">
-            <div className="text-white h-28 w-28 sm:h-28 sm:w-28 md:h-32 md:w-32">
+          <div className="flex items-center gap-4 px-4 sm:px-10">
+            <div className="text-white h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32">
               <img
                 className="w-full h-full object-contain"
                 // src="./EdstasyClasses/logo.png"
@@ -57,11 +57,16 @@ function App() {
                 alt="edstasy-logo"
               />
             </div>
-            <div className="text-black text-xl sm:text-xl md:text-4xl font-bold">
-              Edstasy Classes
+            <div>
+              <div className="animate-bounce font-Rampart text-black text-2xl sm:text-xl md:text-4xl font-bold">
+                Edstasy Classes
+              </div>
+              <p className="text-2xs md:text-base md:font-semibold">
+                Empowering futures through top-tier math and science coaching.
+              </p>
             </div>
           </div>
-          <div className="flex items-center gap-4 pl-1 pb-1.5 sm:pb-0">
+          <div className="flex items-center gap-4 py-2 px-4 sm:px-10 bg-green-200 md:bg-transparent">
             <div className="flex items-center">
               <FiMail className="text-gray-700" />
               <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
@@ -70,9 +75,15 @@ function App() {
             </div>
             <div className="flex items-center">
               <FiPhone className="text-gray-700" />
-              <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
-                +91 7077586648
-              </span>
+              <a
+                className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
+                href="tel:+91-7077586648"
+              >
+                +91-7077586648
+              </a>
+              {/* <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
+                +91-7077586648
+              </span> */}
             </div>
           </div>
         </div>
@@ -104,7 +115,7 @@ function App() {
           </Swiper>
         </div>
 
-        <div className="h-auto md:h-96 bg-blue-500 p-10 text-center flex flex-col md:gap-6 justify-center items-center">
+        <div className="h-auto md:h-96 bg-blue-500 px-4 sm:px-10 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center">
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             About us
           </h1>
@@ -128,7 +139,7 @@ function App() {
               />
             </div>
 
-            <p className="text-gray-500 mt-2 text-lg md:text-4xl font-bold">
+            <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
               200+ Students
             </p>
           </div>
@@ -140,7 +151,7 @@ function App() {
                 alt="edstasy-logo"
               />
             </div>
-            <p className="text-gray-500 mt-2 text-lg md:text-4xl font-bold">
+            <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
               20+ Lectures
             </p>
           </div>
@@ -152,7 +163,7 @@ function App() {
                 alt="edstasy-logo"
               />
             </div>
-            <p className="text-gray-500 mt-2 text-lg md:text-4xl font-bold">
+            <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
               Experienced Faculty
             </p>
           </div>
@@ -184,7 +195,7 @@ function App() {
           <div className="flex items-center gap-4">
             <FiMapPin className="text-gray-700 text-xl" />
             <span className="text-sm sm:text-base md:text-lg">
-              123 Main Street, Cityville, State, Country
+              Jajpur - Singhpur Rd, Goudasahi, Odisha 755004
             </span>
           </div>
 
@@ -195,6 +206,7 @@ function App() {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:scale-125 duration-300"
               >
                 <FiInstagram className="text-gray-700 text-2xl" />
               </a>
@@ -202,13 +214,15 @@ function App() {
                 href="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:scale-125 duration-300"
               >
-                <FiYoutube className="text-gray-700 text-2xl" />
+                <FiYoutube className="text-gray-700 text-2xl " />
               </a>
               <a
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:scale-125 duration-300"
               >
                 <FiTwitter className="text-gray-700 text-2xl" />
               </a>
@@ -226,7 +240,7 @@ function App() {
         target="_blank"
         rel="noopener noreferrer"
         title="whatsapp me"
-        className="fixed bottom-4 right-4 border border-green-500 bg-white p-2 rounded-full"
+        className="fixed bottom-4 right-4 border border-green-500 bg-white p-2 rounded-full hover:scale-110 duration-300"
       >
         <IoLogoWhatsapp className="text-green-500 text-3xl md:text-4xl" />
       </a>
