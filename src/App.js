@@ -169,13 +169,13 @@ function App() {
           </div>
         </div>
 
-        <div className="h-96 bg-blue-500 p-4 sm:p-10 flex justify-center items-center">
+        <div className="h-96 sm:h-[500px] bg-blue-500 p-4 sm:p-10 flex justify-center items-center">
           <iframe
             title="my-loc"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14926.661394566492!2d86.41384019898022!3d20.723809693601797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1be8874e719bdd%3A0x3cfa88f6a15f4a30!2sGoudasahi%2C%20Odisha%20755004!5e0!3m2!1sen!2sin!4v1709048799478!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14926.661394566492!2d86.41384019898022!3d20.723809693601797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1be9002f9805e1%3A0x444580ffd61cc5e1!2sEdstasy%20Classes!5e0!3m2!1sen!2sin!4v1709136562475!5m2!1sen!2sin"
+            className="w-11/12 md:w-1/2 h-full"
             allowfullscreen=""
             loading="lazy"
-            className="w-11/12 md:w-1/2 h-full"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
