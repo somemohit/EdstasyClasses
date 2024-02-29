@@ -244,19 +244,30 @@ function App() {
 
           <div
             name="AboutUs"
-            className="h-auto md:h-96 bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center"
+            className="relative h-auto sm:h-[500px] bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center"
           >
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              About us
-            </h1>
-            <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-0">
-              At Edstasy Classes, we believe in fostering a dynamic learning
-              environment where every student is empowered to achieve their
-              academic goals and unlock their full potential. With a commitment
-              to excellence and innovation, we provide comprehensive coaching
-              solutions designed to nurture holistic development and academic
-              success.
-            </p>
+            {/* background faded logo starts */}
+            <div className="opacity-20 absolute left-1/2 transform -translate-x-1/2 text-white h-64 w-64 sm:h-52 sm:w-52 md:h-96 md:w-96">
+              <img
+                className="w-full h-full object-contain"
+                src="logo.png"
+                alt="edstasy-logo"
+              />
+            </div>
+            {/* background faded logo ends */}
+            <div className="z-10">
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                About us
+              </h1>
+              <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-0">
+                At Edstasy Classes, we believe in fostering a dynamic learning
+                environment where every student is empowered to achieve their
+                academic goals and unlock their full potential. With a
+                commitment to excellence and innovation, we provide
+                comprehensive coaching solutions designed to nurture holistic
+                development and academic success.
+              </p>
+            </div>
           </div>
 
           <div className="parallax-bg py-10 h-auto md:h-96 flex flex-col md:flex-row justify-center items-center md:gap-20 relative overflow-hidden">
