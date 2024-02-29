@@ -57,8 +57,11 @@ function App() {
 
   return (
     <>
-      <div>
-        <nav className="bg-yellow-300 pt-1 shadow-md">
+      <div className="">
+        <button onClick={toggleSidebar} className="fixed top-2 right-2 z-40">
+          <GiHamburgerMenu />
+        </button>
+        <nav className="sm:fixed top-0 left-0 z-40 w-full bg-yellow-300 pt-1 shadow-md">
           <div className="relative mx-auto flex flex-col md:flex-row justify-between md:items-center gap-2">
             <div className="flex items-center gap-4 px-4 sm:px-10">
               <div className="text-white h-28 w-28 sm:h-28 sm:w-28 md:h-32 md:w-32">
@@ -81,9 +84,12 @@ function App() {
             <div className="flex items-center gap-4 py-2 px-4 sm:px-10 bg-green-200 md:bg-transparent">
               <div className="flex items-center">
                 <FiMail className="text-gray-700" />
-                <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
+                <a
+                  className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
+                  href="mailto:satyabratamishra666@gmail.com"
+                >
                   satyabratamishra666@gmail.com
-                </span>
+                </a>
               </div>
               <div className="flex items-center">
                 <FiPhone className="text-gray-700" />
@@ -98,14 +104,10 @@ function App() {
               </span> */}
               </div>
             </div>
-
-            <button onClick={toggleSidebar} className="absolute top-2 right-2">
-              <GiHamburgerMenu />
-            </button>
           </div>
         </nav>
 
-        <main className="mx-auto">
+        <main className="mx-auto sm:pt-32">
           <div className="">
             <Swiper
               modules={[Autoplay, Navigation, Pagination, A11y]}
