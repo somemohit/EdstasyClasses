@@ -309,7 +309,7 @@ function App() {
       <div
         className={`sidebar ${
           !isOpen ? 'open' : ''
-        } fixed left-0 top-0 z-50 h-screen bg-gray-800 text-white w-4/5 transition-all duration-300`}
+        } fixed left-0 top-0 z-50 h-full bg-gray-800 text-white w-4/5 transition-all duration-300`}
       >
         <div className="relative bg-gray-900 text-white w-full h-full py-8 px-4">
           <button
