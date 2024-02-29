@@ -8,7 +8,8 @@ import {
   FiYoutube,
   FiFacebook,
 } from 'react-icons/fi';
-import {IoLogoWhatsapp} from 'react-icons/io';
+import {IoLogoWhatsapp, IoMdClose} from 'react-icons/io';
+import {GiHamburgerMenu} from 'react-icons/gi';
 
 import {Autoplay, Navigation, Pagination, A11y} from 'swiper/modules';
 
@@ -19,8 +20,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import {useState} from 'react';
+import {Link} from 'react-scroll';
 
 function App() {
+  // states start
+  const [isOpen, setIsOpen] = useState(false);
+  // states end
+
   const slideImgs = [
     // {
     //   id: '1',
@@ -44,12 +51,198 @@ function App() {
     },
   ];
 
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div>
-      <nav className="bg-yellow-300 pt-1 shadow-md">
-        <div className="mx-auto flex flex-col md:flex-row justify-between md:items-center gap-2">
-          <div className="flex items-center gap-4 px-4 sm:px-10">
-            <div className="text-white h-28 w-28 sm:h-28 sm:w-28 md:h-32 md:w-32">
+    <>
+      <div>
+        <nav className="bg-yellow-300 pt-1 shadow-md">
+          <div className="relative mx-auto flex flex-col md:flex-row justify-between md:items-center gap-2">
+            <div className="flex items-center gap-4 px-4 sm:px-10">
+              <div className="text-white h-28 w-28 sm:h-28 sm:w-28 md:h-32 md:w-32">
+                <img
+                  className="w-full h-full object-contain"
+                  // src="./EdstasyClasses/logo.png"
+                  src="logo.png"
+                  alt="edstasy-logo"
+                />
+              </div>
+              <div>
+                <div className="bg-gradient-to-r from-blue-700 via-yellow-500 to-green-500 bg-clip-text text-transparent animate-bounce font-Rampart text-black text-3xl sm:text-3xl md:text-4xl font-bold">
+                  Edstasy Classes
+                </div>
+                <p className="text-2xs md:text-base md:font-semibold">
+                  Empowering futures through top-tier math and science coaching.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 py-2 px-4 sm:px-10 bg-green-200 md:bg-transparent">
+              <div className="flex items-center">
+                <FiMail className="text-gray-700" />
+                <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
+                  satyabratamishra666@gmail.com
+                </span>
+              </div>
+              <div className="flex items-center">
+                <FiPhone className="text-gray-700" />
+                <a
+                  className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
+                  href="tel:+91-7077586648"
+                >
+                  +91-7077586648
+                </a>
+                {/* <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
+                +91-7077586648
+              </span> */}
+              </div>
+            </div>
+
+            <button onClick={toggleSidebar} className="absolute top-2 right-2">
+              <GiHamburgerMenu />
+            </button>
+          </div>
+        </nav>
+
+        <main className="mx-auto">
+          <div className="">
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={1}
+              navigation
+              pagination={{clickable: true}}
+              autoplay={{delay: 3000}}
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={() => console.log('slide change')}
+            >
+              {slideImgs?.map((item) => {
+                return (
+                  <SwiperSlide key={item?.id}>
+                    <img
+                      className="w-full h-80 md:h-[550px] object-contain"
+                      src={item?.url}
+                      alt={item?.alt}
+                    />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+
+          <div
+            name="Profile"
+            className="h-auto md:h-fit bg-green-200 px-4 sm:px-20 py-10 sm:py-10 gap-6 md:gap-20 flex flex-col sm:flex-row justify-between items-center"
+          >
+            <div className="flex flex-col gap-4">
+              <div className="text-white h-52 w-52 sm:h-28 sm:w-28 md:h-80 md:w-80 shadow-md">
+                <img
+                  className="w-full h-full object-contain"
+                  src="profile-pic.jpg"
+                  alt="profile-pic"
+                />
+              </div>
+              <p className="text-gray-700 text-sm md:text-xl lg:text-2xl">
+                Mr. Satyabrata Mishra
+              </p>
+              <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-4 py-2 bg-blue-500 border-l-4 border-gray-700">
+                Founder and Educator
+              </p>
+            </div>
+
+            <div className="p-6 sm:p-10 border border-gray-300 rounded-lg relative">
+              <div className="text-5xl sm:text-8xl absolute -top-4 sm:-top-8 left-3 sm:left-6 text-gray-400">
+                ❝
+              </div>
+              <div className="text-5xl sm:text-8xl absolute -bottom-8 sm:-bottom-16 right-3 sm:right-6 text-gray-400">
+                ❞
+              </div>
+              <p className="text-sm sm:text-3xl tracking-wide leading-loose font-cursive text-gray-700">
+                My goal extends beyond teaching textbook content; I strive to
+                equip students to confront and overcome the challenges they'll
+                encounter in the future. My efforts are dedicated to shaping you
+                into a well-rounded individual and preparing you for a
+                successful profession.
+              </p>
+            </div>
+          </div>
+
+          <div
+            name="AboutUs"
+            className="h-auto md:h-96 bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center"
+          >
+            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              About us
+            </h1>
+            <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-0">
+              At Edstasy Classes, we believe in fostering a dynamic learning
+              environment where every student is empowered to achieve their
+              academic goals and unlock their full potential. With a commitment
+              to excellence and innovation, we provide comprehensive coaching
+              solutions designed to nurture holistic development and academic
+              success.
+            </p>
+          </div>
+
+          <div className="parallax-bg py-10 h-auto md:h-96 flex flex-col md:flex-row justify-center items-center md:gap-20 relative overflow-hidden">
+            <div className="flex flex-col justify-center items-center mb-8 md:mb-0">
+              <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
+                <img
+                  className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
+                  src="students.png"
+                  alt="edstasy-logo"
+                />
+              </div>
+
+              <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
+                30+ Students
+              </p>
+            </div>
+            <div className="flex flex-col justify-center items-center mb-8 md:mb-0">
+              <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
+                <img
+                  className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
+                  src="lecture.png"
+                  alt="edstasy-logo"
+                />
+              </div>
+              <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
+                1800+ hours of Lectures
+              </p>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
+                <img
+                  className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
+                  src="teacher.png"
+                  alt="edstasy-logo"
+                />
+              </div>
+              <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
+                Experienced Faculty
+              </p>
+            </div>
+          </div>
+
+          <div
+            name="Map"
+            className="h-96 sm:h-[500px] bg-blue-500 p-4 sm:p-10 flex justify-center items-center"
+          >
+            <iframe
+              title="my-loc"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14926.661394566492!2d86.41384019898022!3d20.723809693601797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1be9002f9805e1%3A0x444580ffd61cc5e1!2sEdstasy%20Classes!5e0!3m2!1sen!2sin!4v1709136562475!5m2!1sen!2sin"
+              className="w-11/12 md:w-1/2 h-full"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </main>
+
+        <footer name="Contact" className="bg-yellow-300">
+          <div className="mx-auto h-fit md:h-56 flex flex-col md:flex-row justify-between items-center gap-10 text-black p-10">
+            <div className="text-white h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44">
               <img
                 className="w-full h-full object-contain"
                 // src="./EdstasyClasses/logo.png"
@@ -57,167 +250,121 @@ function App() {
                 alt="edstasy-logo"
               />
             </div>
-            <div>
-              <div className="bg-gradient-to-r from-blue-700 via-yellow-500 to-green-500 bg-clip-text text-transparent animate-bounce font-Rampart text-black text-3xl sm:text-3xl md:text-4xl font-bold">
-                Edstasy Classes
-              </div>
-              <p className="text-2xs md:text-base md:font-semibold">
-                Empowering futures through top-tier math and science coaching.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 py-2 px-4 sm:px-10 bg-green-200 md:bg-transparent">
-            <div className="flex items-center">
-              <FiMail className="text-gray-700" />
-              <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
-                satyabratamishra666@gmail.com
+
+            <div className="flex items-center gap-4">
+              <FiMapPin className="text-gray-700 text-xl" />
+              <span className="text-sm sm:text-base md:text-lg">
+                Jajpur - Singhpur Rd, Goudasahi, Odisha 755004
               </span>
             </div>
-            <div className="flex items-center">
-              <FiPhone className="text-gray-700" />
-              <a
-                className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
-                href="tel:+91-7077586648"
-              >
-                +91-7077586648
-              </a>
-              {/* <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
-                +91-7077586648
-              </span> */}
+
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-2xl font-bold">Follow us on</p>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.instagram.com/edstasy_classes?igsh=MW96M3ZrMGlyNzVqNg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-125 duration-300"
+                >
+                  <FiInstagram className="text-gray-700 text-2xl" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@EdstasyClasses"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-125 duration-300"
+                >
+                  <FiYoutube className="text-gray-700 text-2xl " />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61557049223443&mibextid=ZbWKwL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-125 duration-300"
+                >
+                  <FiFacebook className="text-gray-700 text-2xl" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
 
-      <main className="mx-auto">
-        <div className="">
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination, A11y]}
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation
-            pagination={{clickable: true}}
-            autoplay={{delay: 3000}}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+          <div className="bg-green-200 h-16 text-gray-500 text-xs sm:text-base flex justify-center items-center">
+            Edstasy Classes -2024 © All Rights Reserved.
+          </div>
+        </footer>
+
+        <a
+          href="https://api.whatsapp.com/send?phone=7750803022"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="whatsapp me"
+          className="fixed bottom-4 right-4 border border-green-500 bg-white p-2 rounded-full hover:scale-110 duration-300"
+        >
+          <IoLogoWhatsapp className="text-green-500 text-3xl md:text-4xl" />
+        </a>
+      </div>
+
+      {/* mobile sidenav starts */}
+      <div
+        className={`sidebar ${
+          isOpen ? 'open' : ''
+        } fixed left-0 top-0 z-50 h-full bg-gray-800 text-white w-4/5 transition-all duration-300`}
+      >
+        <div className="relative bg-gray-900 text-white w-full h-full py-8 px-4">
+          <button
+            className="absolute top-4 right-4 text-white"
+            onClick={toggleSidebar}
           >
-            {slideImgs?.map((item) => {
-              return (
-                <SwiperSlide key={item?.id}>
-                  <img
-                    className="w-full h-80 md:h-[550px] object-contain"
-                    src={item?.url}
-                    alt={item?.alt}
-                  />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-
-        <div className="h-auto md:h-fit bg-green-200 px-4 sm:px-20 py-10 sm:py-10 gap-6 md:gap-20 flex flex-col sm:flex-row justify-between items-center">
-          <div className="flex flex-col gap-4">
-            <div className="text-white h-52 w-52 sm:h-28 sm:w-28 md:h-80 md:w-80 shadow-md">
-              <img
-                className="w-full h-full object-contain"
-                src="profile-pic.jpg"
-                alt="profile-pic"
-              />
-            </div>
-            <p className="text-gray-700 text-sm md:text-xl lg:text-2xl">
-              Mr. Satyabrata Mishra
-            </p>
-            <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-4 py-2 bg-blue-500 border-l-4 border-gray-700">
-              Founder and Educator
-            </p>
-          </div>
-
-          <div className="p-6 sm:p-10 border border-gray-300 rounded-lg relative">
-            <div className="text-5xl sm:text-8xl absolute -top-4 sm:-top-8 left-3 sm:left-6 text-gray-400">
-              ❝
-            </div>
-            <div className="text-5xl sm:text-8xl absolute -bottom-8 sm:-bottom-16 right-3 sm:right-6 text-gray-400">
-              ❞
-            </div>
-            <p className="text-sm sm:text-3xl tracking-wide leading-loose font-cursive text-gray-700">
-              My goal extends beyond teaching textbook content; I strive to
-              equip students to confront and overcome the challenges they'll
-              encounter in the future. My efforts are dedicated to shaping you
-              into a well-rounded individual and preparing you for a successful
-              profession.
-            </p>
-          </div>
-        </div>
-
-        <div className="h-auto md:h-96 bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            About us
-          </h1>
-          <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-0">
-            At Edstasy Classes, we believe in fostering a dynamic learning
-            environment where every student is empowered to achieve their
-            academic goals and unlock their full potential. With a commitment to
-            excellence and innovation, we provide comprehensive coaching
-            solutions designed to nurture holistic development and academic
-            success.
+            <IoMdClose className="text-white text-xl" />
+          </button>
+          <p className="bg-gradient-to-r from-blue-700 via-yellow-500 to-green-500 bg-clip-text text-transparent font-Rampart text-black text-3xl sm:text-3xl md:text-4xl font-bold">
+            Edstasy Classes
           </p>
-        </div>
+          <ul className="pl-1 pt-6 font-bold text-lg">
+            <Link
+              activeClass="active"
+              to="Profile"
+              smooth={true}
+              duration={500}
+              className=""
+              onClick={toggleSidebar}
+            >
+              <li className="py-4">Profile</li>
+            </Link>
+            <Link
+              activeClass="active"
+              to="AboutUs"
+              smooth={true}
+              duration={500}
+              className=""
+              onClick={toggleSidebar}
+            >
+              <li className="py-4">About Us</li>
+            </Link>
+            <Link
+              activeClass="active"
+              to="Map"
+              smooth={true}
+              duration={500}
+              className=""
+              onClick={toggleSidebar}
+            >
+              <li className="py-4">Map</li>
+            </Link>
+            <Link
+              activeClass="active"
+              to="Contact"
+              smooth={true}
+              duration={500}
+              className=""
+              onClick={toggleSidebar}
+            >
+              <li className="py-4">Contact</li>
+            </Link>
+          </ul>
 
-        <div className="parallax-bg py-10 h-auto md:h-96 flex flex-col md:flex-row justify-center items-center md:gap-20 relative overflow-hidden">
-          <div className="flex flex-col justify-center items-center mb-8 md:mb-0">
-            <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
-              <img
-                className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
-                src="students.png"
-                alt="edstasy-logo"
-              />
-            </div>
-
-            <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
-              30+ Students
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center mb-8 md:mb-0">
-            <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
-              <img
-                className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
-                src="lecture.png"
-                alt="edstasy-logo"
-              />
-            </div>
-            <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
-              1800+ hours of Lectures
-            </p>
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <div className="w-28 h-28 md:w-44 md:h-44 flex items-center justify-center bg-blue-500 p-2 md:p-4 rounded-full">
-              <img
-                className="w-3/4 h-3/4 md:w-4/5 md:h-4/5 object-contain"
-                src="teacher.png"
-                alt="edstasy-logo"
-              />
-            </div>
-            <p className="text-yellow-300 mt-2 text-lg md:text-4xl font-bold">
-              Experienced Faculty
-            </p>
-          </div>
-        </div>
-
-        <div className="h-96 sm:h-[500px] bg-blue-500 p-4 sm:p-10 flex justify-center items-center">
-          <iframe
-            title="my-loc"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14926.661394566492!2d86.41384019898022!3d20.723809693601797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1be9002f9805e1%3A0x444580ffd61cc5e1!2sEdstasy%20Classes!5e0!3m2!1sen!2sin!4v1709136562475!5m2!1sen!2sin"
-            className="w-11/12 md:w-1/2 h-full"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </main>
-
-      <footer className="bg-yellow-300">
-        <div className="mx-auto h-fit md:h-56 flex flex-col md:flex-row justify-between items-center gap-10 text-black p-10">
-          <div className="text-white h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44">
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white h-32 w-32 sm:h-28 sm:w-28 md:h-32 md:w-32">
             <img
               className="w-full h-full object-contain"
               // src="./EdstasyClasses/logo.png"
@@ -225,60 +372,10 @@ function App() {
               alt="edstasy-logo"
             />
           </div>
-
-          <div className="flex items-center gap-4">
-            <FiMapPin className="text-gray-700 text-xl" />
-            <span className="text-sm sm:text-base md:text-lg">
-              Jajpur - Singhpur Rd, Goudasahi, Odisha 755004
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center gap-4">
-            <p className="text-2xl font-bold">Follow us on</p>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.instagram.com/edstasy_classes?igsh=MW96M3ZrMGlyNzVqNg=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-125 duration-300"
-              >
-                <FiInstagram className="text-gray-700 text-2xl" />
-              </a>
-              <a
-                href="https://www.youtube.com/@EdstasyClasses"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-125 duration-300"
-              >
-                <FiYoutube className="text-gray-700 text-2xl " />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61557049223443&mibextid=ZbWKwL"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-125 duration-300"
-              >
-                <FiFacebook className="text-gray-700 text-2xl" />
-              </a>
-            </div>
-          </div>
         </div>
-
-        <div className="bg-green-200 h-16 text-gray-500 text-xs sm:text-base flex justify-center items-center">
-          Edstasy Classes -2024 © All Rights Reserved.
-        </div>
-      </footer>
-
-      <a
-        href="https://api.whatsapp.com/send?phone=7750803022"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="whatsapp me"
-        className="fixed bottom-4 right-4 border border-green-500 bg-white p-2 rounded-full hover:scale-110 duration-300"
-      >
-        <IoLogoWhatsapp className="text-green-500 text-3xl md:text-4xl" />
-      </a>
-    </div>
+      </div>
+      {/* mobile sidenav ends */}
+    </>
   );
 }
 
