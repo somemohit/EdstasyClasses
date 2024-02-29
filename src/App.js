@@ -115,6 +115,40 @@ function App() {
           </Swiper>
         </div>
 
+        <div className="h-auto md:h-fit bg-green-200 px-4 sm:px-10 py-10 sm:py-10 gap-6 md:gap-10 flex flex-col sm:flex-row justify-between items-center">
+          <div className="flex flex-col gap-4">
+            <div className="text-white h-52 w-52 sm:h-28 sm:w-28 md:h-80 md:w-80">
+              <img
+                className="w-full h-full object-contain"
+                src="profile-pic.jpg"
+                alt="profile-pic"
+              />
+            </div>
+            <p className="text-gray-700 text-sm md:text-xl lg:text-2xl">
+              Mr. Satyabrata Mishra
+            </p>
+            <p className="text-white text-sm md:text-xl lg:text-2xl px-4 md:px-4 py-2 bg-blue-500 border-l-4 border-gray-700">
+              Founder and Educator
+            </p>
+          </div>
+
+          <div className="p-6 sm:p-10 border border-gray-300 rounded-lg relative">
+            <div className="text-5xl sm:text-8xl absolute -top-4 sm:-top-8 left-3 sm:left-6 text-gray-400">
+              ❝
+            </div>
+            <div className="text-5xl sm:text-8xl absolute -bottom-8 sm:-bottom-16 right-3 sm:right-6 text-gray-400">
+              ❞
+            </div>
+            <p className="text-sm sm:text-3xl font-cursive text-gray-700">
+              My goal extends beyond teaching textbook content; I strive to
+              equip students to confront and overcome the challenges they'll
+              encounter in the future. My efforts are dedicated to shaping you
+              into a well-rounded individual and preparing you for a successful
+              profession.
+            </p>
+          </div>
+        </div>
+
         <div className="h-auto md:h-96 bg-blue-500 px-4 sm:px-10 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center">
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             About us
@@ -125,7 +159,7 @@ function App() {
             academic goals and unlock their full potential. With a commitment to
             excellence and innovation, we provide comprehensive coaching
             solutions designed to nurture holistic development and academic
-            success. This is some sample text for the body of the page.
+            success.
           </p>
         </div>
 

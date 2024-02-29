@@ -9,6 +9,7 @@ module.exports = {
       },
       fontFamily: {
         Rampart: ['Jost', 'sans-serif'],
+        cursive: ['Lobster', 'sans-serif'],
       },
     },
   },
