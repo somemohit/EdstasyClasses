@@ -58,7 +58,7 @@ function App() {
               />
             </div>
             <div>
-              <div className="animate-bounce font-Rampart text-black text-3xl sm:text-3xl md:text-4xl font-bold">
+              <div className="bg-gradient-to-r from-blue-700 via-yellow-500 to-green-500 bg-clip-text text-transparent animate-bounce font-Rampart text-black text-3xl sm:text-3xl md:text-4xl font-bold">
                 Edstasy Classes
               </div>
               <p className="text-2xs md:text-base md:font-semibold">
@@ -115,9 +115,9 @@ function App() {
           </Swiper>
         </div>
 
-        <div className="h-auto md:h-fit bg-green-200 px-4 sm:px-10 py-10 sm:py-10 gap-6 md:gap-10 flex flex-col sm:flex-row justify-between items-center">
+        <div className="h-auto md:h-fit bg-green-200 px-4 sm:px-20 py-10 sm:py-10 gap-6 md:gap-20 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex flex-col gap-4">
-            <div className="text-white h-52 w-52 sm:h-28 sm:w-28 md:h-80 md:w-80">
+            <div className="text-white h-52 w-52 sm:h-28 sm:w-28 md:h-80 md:w-80 shadow-md">
               <img
                 className="w-full h-full object-contain"
                 src="profile-pic.jpg"
@@ -139,7 +139,7 @@ function App() {
             <div className="text-5xl sm:text-8xl absolute -bottom-8 sm:-bottom-16 right-3 sm:right-6 text-gray-400">
               ❞
             </div>
-            <p className="text-sm sm:text-3xl font-cursive text-gray-700">
+            <p className="text-sm sm:text-3xl tracking-wide leading-loose font-cursive text-gray-700">
               My goal extends beyond teaching textbook content; I strive to
               equip students to confront and overcome the challenges they'll
               encounter in the future. My efforts are dedicated to shaping you
@@ -149,7 +149,7 @@ function App() {
           </div>
         </div>
 
-        <div className="h-auto md:h-96 bg-blue-500 px-4 sm:px-10 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center">
+        <div className="h-auto md:h-96 bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center">
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             About us
           </h1>
