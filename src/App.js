@@ -81,28 +81,100 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 py-2 px-4 sm:px-10 bg-green-200 md:bg-transparent">
-              <div className="flex items-center">
-                <FiMail className="text-gray-700" />
-                <a
-                  className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
-                  href="mailto:satyabratamishra666@gmail.com"
-                >
-                  satyabratamishra666@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <FiPhone className="text-gray-700" />
-                <a
-                  className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
-                  href="tel:+91-7077586648"
-                >
-                  +91-7077586648
-                </a>
-                {/* <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
+            <div>
+              <div className="flex items-center justify-between gap-4 py-2 sm:py-1 px-4 sm:px-10 bg-green-200 md:bg-transparent">
+                <div className="flex items-center">
+                  <FiMail className="text-gray-700" />
+                  <a
+                    className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
+                    href="mailto:satyabratamishra666@gmail.com"
+                  >
+                    satyabratamishra666@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <FiPhone className="text-gray-700" />
+                  <a
+                    className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
+                    href="tel:+91-7077586648"
+                  >
+                    +91-7077586648
+                  </a>
+                  {/* <span className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline">
                 +91-7077586648
               </span> */}
+                </div>
               </div>
+
+              {/* menu options start */}
+              <div className="hidden sm:flex justify-end px-4 sm:px-10">
+                <ul
+                  className={`md:flex font-semibold text-black h-fit md:h-full py-4 gap-8 space-y-6 md:space-y-0 items-center md:space-x-12 z-[-1] md:z-auto
+        absolute md:static left-0 w-full md:w-auto border-t-2 md:border-t-0
+        transition-all md:transition-none duration-500 ease-in-out shadow-xl md:shadow-none`}
+                >
+                  <li className="cursor-pointer">
+                    <Link
+                      activeClass="active"
+                      to="Profile"
+                      smooth={true}
+                      duration={500}
+                      offset={-100}
+                      className=" relative before:content-[''] before:absolute 
+            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
+            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
+                    >
+                      Profile
+                    </Link>
+                  </li>
+
+                  <li className="cursor-pointer">
+                    <Link
+                      activeClass="active"
+                      to="AboutUs"
+                      smooth={true}
+                      duration={500}
+                      offset={-100}
+                      className=" relative before:content-[''] before:absolute 
+            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
+            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
+                    >
+                      About
+                    </Link>
+                  </li>
+
+                  <li className="cursor-pointer">
+                    <Link
+                      activeClass="active"
+                      to="Map"
+                      smooth={true}
+                      duration={500}
+                      offset={-100}
+                      className=" relative before:content-[''] before:absolute 
+            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
+            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
+                    >
+                      Map
+                    </Link>
+                  </li>
+
+                  <li className="cursor-pointer">
+                    <Link
+                      activeClass="active"
+                      to="Contact"
+                      smooth={true}
+                      duration={500}
+                      offset={-100}
+                      className=" relative before:content-[''] before:absolute 
+            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
+            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* menu options end */}
             </div>
           </div>
         </nav>
