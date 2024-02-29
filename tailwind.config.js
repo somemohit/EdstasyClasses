@@ -11,6 +11,9 @@ module.exports = {
         Rampart: ['Jost', 'sans-serif'],
         cursive: ['Lobster', 'sans-serif'],
       },
+      boxShadow: {
+        'nimble': '4.0px 8.0px 8.0px rgba(0,0,0,0.38);',
+      }
     },
   },
   plugins: [],

@@ -255,7 +255,7 @@ function App() {
               />
             </div>
             {/* background faded logo ends */}
-            <div className="z-10">
+            <div className="z-10 flex flex-col gap-0 sm:gap-4">
               <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 About us
               </h1>
@@ -393,8 +393,8 @@ function App() {
       {/* mobile sidenav starts */}
       <div
         className={`sidebar ${
-          !isOpen ? 'open' : ''
-        } fixed left-0 top-0 z-50 h-full bg-gray-800 text-white w-4/5 transition-all duration-300`}
+          !isOpen ? 'open' : 'shadow-nimble'
+        } fixed left-0 top-0 z-50 h-full text-white w-4/5 transition-all duration-300`}
       >
         <div className="relative bg-gray-900 text-white w-full h-full py-8 px-4">
           <button
