@@ -87,9 +87,9 @@ function App() {
                   <FiMail className="text-gray-700" />
                   <a
                     className="text-gray-700 text-xs sm:text-sm md:text-base ml-1 inline"
-                    href="mailto:satyabratamishra666@gmail.com"
+                    href="mailto:edstasyclasses@gmail.com"
                   >
-                    satyabratamishra666@gmail.com
+                    edstasyclasses@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center">
