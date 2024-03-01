@@ -46,7 +46,7 @@ function App() {
     },
     {
       id: '3',
-      url: 'tution.jpg',
+      url: '/slide/poster.png',
       alt: 'edstasy-3',
     },
   ];
@@ -82,7 +82,7 @@ function App() {
               </div>
             </div>
             <div>
-              <div className="flex items-center justify-between gap-4 py-2 sm:py-1 px-4 sm:px-10 bg-green-200 md:bg-transparent">
+              <div className="flex items-center justify-between sm:justify-end gap-4 py-2 sm:py-1 px-4 sm:px-10 bg-green-200 md:bg-transparent">
                 <div className="flex items-center">
                   <FiMail className="text-gray-700" />
                   <a
@@ -104,7 +104,7 @@ function App() {
                 +91-7077586648
               </span> */}
                 </div>
-              </div> 
+              </div>
 
               {/* menu options start */}
               <div className="hidden sm:flex justify-end px-4 sm:px-10">
@@ -246,6 +246,36 @@ function App() {
           </div>
 
           <div
+            name=""
+            style={{backgroundImage: "url('pattern-2.jpg')"}}
+            className="relative h-auto sm:h-[500px] bg-white px-4 sm:px-20 py-10 sm:py-10 flex flex-col gap-6 sm:flex-row md:gap-6 justify-between items-center"
+          >
+            <ul className="text-sm sm:text-3xl flex flex-col gap-4 font-semibold">
+              <li>👉 Structured Curriculum and small class sizes</li>
+              <li>👉 Weekly test and monthly test to track progress</li>
+              <li>👉 Practice Materials and doubt clear sessions</li>
+              <li>👉 Individualized Support and motivational support</li>
+              <li>
+                👉 Extra-curricular activities and personality development
+                skills
+              </li>
+              <li>👉 Parent-Teacher Communication</li>
+              <li>👉 Group activities and cultural inclusivity</li>
+            </ul>
+
+            <div className="sm:w-1/3 p-6 bg-yellow-300 rounded-lg shadow-lg">
+              <p className="text-sm sm:text-3xl font-bold mb-4">
+                Class Timing:-
+              </p>
+              <ul className="text-sm sm:text-2xl flex flex-col gap-4 font-semibold">
+                <li>i) Monday to Friday(Class)</li>
+                <li>ii) Saturday (Closed)</li>
+                <li>iii) Sunday (Exam and Extra curricular Activities )</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
             name="AboutUs"
             className="relative h-auto sm:h-[500px] bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center"
           >
@@ -366,7 +396,7 @@ function App() {
                   <FiYoutube className="text-gray-700 text-2xl " />
                 </a>
                 <a
-                  href="https://www.facebook.com/profile.php?id=61557049223443&mibextid=ZbWKwL"
+                  href="https://www.facebook.com/Edstasy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-125 duration-300"
