@@ -36,12 +36,12 @@ function App() {
     // },
     {
       id: '1',
-      url: 'tution.jpg',
+      url: '/slide/img1.jpg',
       alt: 'edstasy-1',
     },
     {
       id: '2',
-      url: 'tution.jpg',
+      url: '/slide/img2.jpg',
       alt: 'edstasy-2',
     },
     {
@@ -180,7 +180,10 @@ function App() {
         </nav>
 
         <main className="mx-auto sm:pt-32">
-          <div className="">
+          <div
+            className="bg-cover bg-center"
+            style={{backgroundImage: "url('slide/pattern.jpg')"}}
+          >
             <Swiper
               modules={[Autoplay, Navigation, Pagination, A11y]}
               spaceBetween={50}
@@ -195,7 +198,7 @@ function App() {
                 return (
                   <SwiperSlide key={item?.id}>
                     <img
-                      className="w-full h-80 md:h-[550px] object-contain"
+                      className="w-full h-80 md:h-[600px] object-contain"
                       src={item?.url}
                       alt={item?.alt}
                     />
