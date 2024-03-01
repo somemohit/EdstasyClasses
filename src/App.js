@@ -104,7 +104,7 @@ function App() {
                 +91-7077586648
               </span> */}
                 </div>
-              </div>
+              </div> 
 
               {/* menu options start */}
               <div className="hidden sm:flex justify-end px-4 sm:px-10">
