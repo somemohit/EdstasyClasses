@@ -9,7 +9,7 @@ module.exports = {
       },
       fontFamily: {
         Rampart: ['Jost', 'sans-serif'],
-        cursive: ['Lobster', 'sans-serif'],
+        cursive: ['IBM Plex Mono', 'monospace'],
       },
       boxShadow: {
         'nimble': '4.0px 8.0px 8.0px rgba(0,0,0,0.38);',
