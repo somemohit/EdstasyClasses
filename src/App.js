@@ -22,34 +22,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {useState} from 'react';
 import {Link} from 'react-scroll';
+import {menus, slideImgs} from './StaticData';
 
 function App() {
   // states start
   const [isOpen, setIsOpen] = useState(false);
   // states end
-  console.log(isOpen);
-  const slideImgs = [
-    // {
-    //   id: '1',
-    //   url: './EdstasyClasses/tution.jpg',
-    //   alt: 'edstasy-1',
-    // },
-    {
-      id: '1',
-      url: '/slide/img1.jpg',
-      alt: 'edstasy-1',
-    },
-    {
-      id: '2',
-      url: '/slide/img2.jpg',
-      alt: 'edstasy-2',
-    },
-    {
-      id: '3',
-      url: '/slide/poster.png',
-      alt: 'edstasy-3',
-    },
-  ];
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -113,65 +91,24 @@ function App() {
         absolute md:static left-0 w-full md:w-auto border-t-2 md:border-t-0
         transition-all md:transition-none duration-500 ease-in-out shadow-xl md:shadow-none`}
                 >
-                  <li className="cursor-pointer">
-                    <Link
-                      activeClass="active"
-                      to="Profile"
-                      smooth={true}
-                      duration={500}
-                      offset={-100}
-                      className=" relative before:content-[''] before:absolute 
-            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
-            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
-                    >
-                      Profile
-                    </Link>
-                  </li>
-
-                  <li className="cursor-pointer">
-                    <Link
-                      activeClass="active"
-                      to="AboutUs"
-                      smooth={true}
-                      duration={500}
-                      offset={-100}
-                      className=" relative before:content-[''] before:absolute 
-            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
-            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
-                    >
-                      About
-                    </Link>
-                  </li>
-
-                  <li className="cursor-pointer">
-                    <Link
-                      activeClass="active"
-                      to="Map"
-                      smooth={true}
-                      duration={500}
-                      offset={-100}
-                      className=" relative before:content-[''] before:absolute 
-            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
-            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
-                    >
-                      Map
-                    </Link>
-                  </li>
-
-                  <li className="cursor-pointer">
-                    <Link
-                      activeClass="active"
-                      to="Contact"
-                      smooth={true}
-                      duration={500}
-                      offset={-100}
-                      className=" relative before:content-[''] before:absolute 
-            before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
-            before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
-                    >
-                      Contact
-                    </Link>
-                  </li>
+                  {menus?.map((item) => {
+                    return (
+                      <li key={item?.id} className="cursor-pointer">
+                        <Link
+                          activeClass="active"
+                          to={item?.name}
+                          smooth={true}
+                          duration={500}
+                          offset={-100}
+                          className=" relative before:content-[''] before:absolute 
+                before:opacity-0 before:-bottom-2 md:before:left-0 before:h-1 before:rounded-full before:duration-300 before:transition-all
+                before:bg-blue-500 before:w-0 hover:before:h-1 hover:before:w-full hover:before:opacity-100"
+                        >
+                          {item?.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               {/* menu options end */}
@@ -246,37 +183,42 @@ function App() {
           </div>
 
           <div
-            name=""
+            name="Features"
             style={{backgroundImage: "url('pattern-2.jpg')"}}
-            className="relative h-auto sm:h-[500px] bg-white px-4 sm:px-20 py-10 sm:py-10 flex flex-col gap-6 sm:flex-row md:gap-6 justify-between items-center"
+            className="relative bg-cover h-auto bg-white px-4 sm:px-20 py-10 sm:py-20"
           >
-            <ul className="text-sm sm:text-3xl flex flex-col gap-4 font-semibold">
-              <li>👉 Structured Curriculum and small class sizes</li>
-              <li>👉 Weekly test and monthly test to track progress</li>
-              <li>👉 Practice Materials and doubt clear sessions</li>
-              <li>👉 Individualized Support and motivational support</li>
-              <li>
-                👉 Extra-curricular activities and personality development
-                skills
-              </li>
-              <li>👉 Parent-Teacher Communication</li>
-              <li>👉 Group activities and cultural inclusivity</li>
-            </ul>
-
-            <div className="sm:w-1/3 p-6 bg-yellow-300 rounded-lg shadow-lg">
-              <p className="text-sm sm:text-3xl font-bold mb-4">
-                Class Timing:-
-              </p>
-              <ul className="text-sm sm:text-2xl flex flex-col gap-4 font-semibold">
-                <li>i) Monday to Friday(Class)</li>
-                <li>ii) Saturday (Closed)</li>
-                <li>iii) Sunday (Exam and Extra curricular Activities )</li>
+            <p className="text-3xl sm:text-6xl text-white font-bold text-center mb-4 sm:mb-8">
+              Our Features
+            </p>
+            <div className="flex flex-col gap-6 sm:flex-row md:gap-6 justify-between items-center">
+              <ul className="text-sm sm:text-3xl text-white flex flex-col gap-4 font-semibold">
+                <li>👉 Structured Curriculum and small class sizes</li>
+                <li>👉 Weekly test and monthly test to track progress</li>
+                <li>👉 Practice Materials and doubt clear sessions</li>
+                <li>👉 Individualized Support and motivational support</li>
+                <li>
+                  👉 Extra-curricular activities and personality development
+                  skills
+                </li>
+                <li>👉 Parent-Teacher Communication</li>
+                <li>👉 Group activities and cultural inclusivity</li>
               </ul>
+
+              <div className="sm:w-1/3 p-4 sm:p-6 bg-gradient-to-r from-blue-400 via-yellow-300 to-green-200 rounded-lg shadow-lg">
+                <p className="text-sm sm:text-3xl font-bold mb-3 sm:mb-4">
+                  Class Timing:-
+                </p>
+                <ul className="text-xs sm:text-2xl flex flex-col gap-3 sm:gap-4 font-semibold">
+                  <li>i) Monday to Friday(Class)</li>
+                  <li>ii) Saturday (Closed)</li>
+                  <li>iii) Sunday (Exam and Extra curricular Activities )</li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div
-            name="AboutUs"
+            name="About"
             className="relative h-auto sm:h-[500px] bg-blue-500 px-4 sm:px-20 py-10 sm:py-10 text-center flex flex-col md:gap-6 justify-center items-center"
           >
             {/* background faded logo starts */}
@@ -344,7 +286,7 @@ function App() {
           </div>
 
           <div
-            name="Map"
+            name="Location"
             className="h-96 sm:h-[500px] bg-blue-500 p-4 sm:p-10 flex justify-center items-center"
           >
             <iframe
@@ -440,46 +382,21 @@ function App() {
             Edstasy Classes
           </p>
           <ul className="pl-1 pt-6 font-bold text-lg">
-            <Link
-              activeClass="active"
-              to="Profile"
-              smooth={true}
-              duration={500}
-              className=""
-              onClick={toggleSidebar}
-            >
-              <li className="py-4">Profile</li>
-            </Link>
-            <Link
-              activeClass="active"
-              to="AboutUs"
-              smooth={true}
-              duration={500}
-              className=""
-              onClick={toggleSidebar}
-            >
-              <li className="py-4">About Us</li>
-            </Link>
-            <Link
-              activeClass="active"
-              to="Map"
-              smooth={true}
-              duration={500}
-              className=""
-              onClick={toggleSidebar}
-            >
-              <li className="py-4">Map</li>
-            </Link>
-            <Link
-              activeClass="active"
-              to="Contact"
-              smooth={true}
-              duration={500}
-              className=""
-              onClick={toggleSidebar}
-            >
-              <li className="py-4">Contact</li>
-            </Link>
+            {menus?.map((item) => {
+              return (
+                <Link
+                  key={item?.id}
+                  activeClass="active"
+                  to={item?.name}
+                  smooth={true}
+                  duration={500}
+                  className=""
+                  onClick={toggleSidebar}
+                >
+                  <li className="py-4">{item?.name}</li>
+                </Link>
+              );
+            })}
           </ul>
 
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white h-32 w-32 sm:h-28 sm:w-28 md:h-32 md:w-32">
