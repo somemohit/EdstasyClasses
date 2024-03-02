@@ -211,7 +211,7 @@ function App() {
                 <ul className="text-xs sm:text-2xl flex flex-col gap-3 sm:gap-4 font-semibold">
                   <li>i) Monday to Friday(Class)</li>
                   <li>ii) Saturday (Closed)</li>
-                  <li>iii) Sunday (Exam and Extra curricular Activities )</li>
+                  <li>iii) Sunday (Exam and Extra curricular Activities)</li>
                 </ul>
               </div>
             </div>
@@ -322,7 +322,7 @@ function App() {
               <p className="text-2xl font-bold">Follow us on</p>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://www.instagram.com/edstasy_classes?igsh=MW96M3ZrMGlyNzVqNg=="
+                  href="https://www.instagram.com/Edstasy.Classes"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-125 duration-300"
